@@ -82,7 +82,26 @@ namespace Introduction
 			*/
 			#endregion TYPE_CONVERSIONS
 
-			Console.WriteLine((5l).GetType());
+			#region LITHERALS
+			/*
+			Console.WriteLine((-5l).GetType());
+			Console.WriteLine((5.0f).GetType());
+			Console.WriteLine((5.0m).GetType());
+			Console.WriteLine(3e-500);
+			Console.WriteLine(sizeof(decimal));
+
+			decimal dividend = Decimal.One;
+			decimal divisor = 3;
+			// The following displays 0.9999999999999999999999999999 to the console
+			Console.WriteLine(Math.Round(dividend / divisor * divisor));
+			*/
+			#endregion LITERALS
+
+			int i = 3;
+
+			i = ++i + ++i;
+
+			Console.WriteLine(i);
 		}
 	}
 }
