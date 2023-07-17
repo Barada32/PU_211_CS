@@ -72,8 +72,9 @@ namespace TaskLVL1
 			//	}
 			//} while (key != ConsoleKey.Escape); 
 			#endregion
-			Console.CursorTop = 10;
-			Console.CursorLeft = 10;
+
+			int x = 10;
+			int y = 10;
 			Console.CursorVisible = false;
 			ConsoleKey key;
 			do
@@ -81,13 +82,15 @@ namespace TaskLVL1
 				key = Console.ReadKey(true).Key;
 				switch (key)
 				{
-					case ConsoleKey.W:	Console.CursorTop++; break;
-					case ConsoleKey.S:	Console.CursorTop--; break;
-					case ConsoleKey.A:	Console.CursorLeft--;break;
-					case ConsoleKey.D:	Console.CursorLeft++;break;
-					default: Console.Beep();break;
+					case ConsoleKey.W:	y--; break;
+					case ConsoleKey.S:	y++; break;
+					case ConsoleKey.A:	x--; break;
+					case ConsoleKey.D:	x++; break;
+					default: Console.Beep(); break;
 				}
+				Console.Clear();
 				Console.BackgroundColor = ConsoleColor.Blue;
+				Console.SetCursorPosition(x, y);
 				Console.WriteLine(" ");
 				Console.BackgroundColor = ConsoleColor.Black; 
 			} while (key != ConsoleKey.Escape);
