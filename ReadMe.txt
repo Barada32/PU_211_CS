@@ -2,6 +2,9 @@
 https://www.youtube.com/watch?v=Hv4pyBZlIbU&list=PLeqyOOqxeiINkiWk7UrwAM6hTxWUQ5MrW
 
 TODO:
+1. Написать "Змейку";
+
+DONE:
 1. Выучить теорию!!!
 2. Используя интерполяцию строк, и классы обвертки вывести на экран свойства всех числовых типов	DONE
    в следующем формате:
