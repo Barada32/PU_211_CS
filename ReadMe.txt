@@ -2,6 +2,11 @@
 https://www.youtube.com/watch?v=Hv4pyBZlIbU&list=PLeqyOOqxeiINkiWk7UrwAM6hTxWUQ5MrW
 
 TODO:
+1. Вычислить Sum, Avg, Min, Max для зубчатого массива;
+2. Реализовать класс 'Point', в классе 'Point' должен быть метод 'distance()',  вычислить расстояние до указанной точки;
+3. Реализовать класс 'Point', в классе 'Point' должен быть статический метод 'distance()',  вычислить расстояние между двумя точками;
+
+TODO:
 1. Написать "Змейку";
 
 DONE:

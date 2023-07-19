@@ -56,74 +56,74 @@ namespace TaskLVL1
 			#endregion
 
 			#region SHOOTER
-			//ConsoleKey key;
-			//do
-			//{
-			//	key = Console.ReadKey(true).Key;
-			//	switch (key)
-			//	{
-			//		case ConsoleKey.W: Console.WriteLine("Вперед"); break;
-			//		case ConsoleKey.S: Console.WriteLine("Назад"); break;
-			//		case ConsoleKey.A: Console.WriteLine("Влево"); break;
-			//		case ConsoleKey.D: Console.WriteLine("Вправо"); break;
-			//		case ConsoleKey.Spacebar: Console.WriteLine("Прыжок"); break;
-			//		case ConsoleKey.Enter: Console.Beep(); break;
-			//		default: Console.WriteLine("Error"); break;
-			//	}
-			//} while (key != ConsoleKey.Escape); 
-			#endregion
-
-			Console.SetWindowPosition(0, 0);
-			Console.BufferWidth = Console.WindowWidth + 1;
-			Console.BufferHeight = Console.WindowHeight + 1;
-			Console.WriteLine($"Buffer: {Console.BufferWidth}	{Console.BufferHeight}");
-			Console.WriteLine($"Window: {Console.WindowWidth}	{Console.WindowHeight}");
-
-			Random rand = new Random();
-
-			int x = rand.Next(Console.WindowWidth - 1);
-			int y = rand.Next(Console.WindowHeight - 1);
-			Console.CursorVisible = false;
 			ConsoleKey key;
 			do
 			{
-				int outOfRange = 0;
 				key = Console.ReadKey(true).Key;
 				switch (key)
 				{
-					case ConsoleKey.UpArrow:
-					case ConsoleKey.W: y--; break;
-					case ConsoleKey.DownArrow:
-					case ConsoleKey.S: y++; break;
-					case ConsoleKey.LeftArrow:
-					case ConsoleKey.A: x--; break;
-					case ConsoleKey.RightArrow:
-					case ConsoleKey.D: x++; break;
-					default: Console.Beep(500, 500); break;
-				}
-				if (x < 0) { x = 0; outOfRange++; }
-				if (y < 0) { y = 0; outOfRange++; }
-				if (x >= Console.WindowWidth - 1) { x = Console.WindowWidth - 1; outOfRange++; }
-				if (y >= Console.WindowHeight - 1) { y = Console.WindowHeight - 1; outOfRange++; }
-				if (outOfRange > 0) Console.Beep();
-				Console.Clear();
-				Console.BackgroundColor = ConsoleColor.Blue;
-				Console.SetCursorPosition(x, y);
-				Console.WriteLine(" ");
-				Console.BackgroundColor = ConsoleColor.Black;
-
-				Console.SetCursorPosition(0, 0);
-				Console.WriteLine("X = " + x);
-				Console.WriteLine("Y = " + y);
-				try
-				{
-				}
-				catch (Exception e)
-				{
-					Console.SetCursorPosition(1, Console.BufferHeight - 2);
-					Console.WriteLine(e.Message);
+					case ConsoleKey.W: Console.WriteLine("Вперед"); break;
+					case ConsoleKey.S: Console.WriteLine("Назад"); break;
+					case ConsoleKey.A: Console.WriteLine("Влево"); break;
+					case ConsoleKey.D: Console.WriteLine("Вправо"); break;
+					case ConsoleKey.Spacebar: Console.WriteLine("Прыжок"); break;
+					case ConsoleKey.Enter: Console.Beep(); break;
+					default: Console.WriteLine("Error"); break;
 				}
 			} while (key != ConsoleKey.Escape);
+			#endregion
+
+			//Console.SetWindowPosition(0, 0);
+			//Console.BufferWidth = Console.WindowWidth + 1;
+			//Console.BufferHeight = Console.WindowHeight + 1;
+			//Console.WriteLine($"Buffer: {Console.BufferWidth}	{Console.BufferHeight}");
+			//Console.WriteLine($"Window: {Console.WindowWidth}	{Console.WindowHeight}");
+
+			//Random rand = new Random();
+
+			//int x = rand.Next(Console.WindowWidth - 1);
+			//int y = rand.Next(Console.WindowHeight - 1);
+			//Console.CursorVisible = false;
+			//ConsoleKey key;
+			//do
+			//{
+			//	int outOfRange = 0;
+			//	key = Console.ReadKey(true).Key;
+			//	switch (key)
+			//	{
+			//		case ConsoleKey.UpArrow:
+			//		case ConsoleKey.W: y--; break;
+			//		case ConsoleKey.DownArrow:
+			//		case ConsoleKey.S: y++; break;
+			//		case ConsoleKey.LeftArrow:
+			//		case ConsoleKey.A: x--; break;
+			//		case ConsoleKey.RightArrow:
+			//		case ConsoleKey.D: x++; break;
+			//		default: Console.Beep(500, 500); break;
+			//	}
+			//	if (x < 0) { x = 0; outOfRange++; }
+			//	if (y < 0) { y = 0; outOfRange++; }
+			//	if (x >= Console.WindowWidth - 1) { x = Console.WindowWidth - 1; outOfRange++; }
+			//	if (y >= Console.WindowHeight - 1) { y = Console.WindowHeight - 1; outOfRange++; }
+			//	if (outOfRange > 0) Console.Beep();
+			//	Console.Clear();
+			//	Console.BackgroundColor = ConsoleColor.Blue;
+			//	Console.SetCursorPosition(x, y);
+			//	Console.WriteLine(" ");
+			//	Console.BackgroundColor = ConsoleColor.Black;
+
+			//	Console.SetCursorPosition(0, 0);
+			//	Console.WriteLine("X = " + x);
+			//	Console.WriteLine("Y = " + y);
+			//	try
+			//	{
+			//	}
+			//	catch (Exception e)
+			//	{
+			//		Console.SetCursorPosition(1, Console.BufferHeight - 2);
+			//		Console.WriteLine(e.Message);
+			//	}
+			//} while (key != ConsoleKey.Escape);
 		}
 	}
 }
