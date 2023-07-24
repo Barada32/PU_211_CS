@@ -154,29 +154,54 @@ namespace Arrays
 			//	{
 			//		Console.WriteLine("Строка пустая");
 			//	}
-			//} 
+			//}
+			//int sum = 0;
+			//int count = 0;
+			//foreach (int[] i in ragged_arr)
+			//{
+			//	if (i != null)
+			//	{
+			//		sum += i.Sum();
+			//		count += i.Length; 
+			//	}
+			//}
+			//Console.WriteLine($"Сумма элементов массива: {sum}");
+			//Console.WriteLine($"Среднее-арифметическое элементов массива: {(double)sum / count}");
 			#endregion
-			Season season = Season.Spring;
-			Console.WriteLine(season);
 
-			foreach (Week i in System.Enum.GetValues(typeof(Week)).Cast<Week>())
+			//Week day = Week.Sunday;
+			//Console.WriteLine(day);
+			//Console.WriteLine(Enum.GetUnderlyingType(typeof(Week)));
+			string[] dayName = Enum.GetNames(typeof(Week));
+			int[] dayNumber = (int[])Enum.GetValues(typeof(Week));
+			for (int i = 0; i < dayNumber.Length; i++)
 			{
-				Console.WriteLine(i);
+				Console.WriteLine($"Name: {dayName[i]} \t- Value: {dayNumber[i]}");
 			}
+			Console.WriteLine(delimiter);
+			string[] distName = Enum.GetNames(typeof(DistanceFromSun));
+			ulong[] distValue = (ulong[])Enum.GetValues(typeof(DistanceFromSun));
+			for (int i = 0; i < distName.Length; i++)
+			{
+				Console.WriteLine($"Name: {distName[i]}\t= {distValue[i]}");
+			}
+			Console.WriteLine($"Type: {Enum.GetUnderlyingType(typeof(DistanceFromSun))}");
 		}
-		enum Season
+		const string delimiter = "\n--------------------------------------------------\n";
+
+		enum Week { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+		enum DistanceFromSun : ulong
 		{
-			Winter, Spring, Summer, Autumn
-		};
-		enum Week : uint
-		{
-			Sunday = 0,
-			Monday = 1,
-			Tuesday = 2,
-			Wednesday = 3,
-			Thursday = 4,
-			Friday = 5,
-			Saturday = 6
-		};
+			Sun = 0,
+			Mercury = 57900000,
+			Venus = 108200000,
+			Earth = 149600000,
+			Mars = 227900000,
+			Jupiter = 7783000000,
+			Saturn = 1427000000,
+			Uranus = 2870000000,
+			Neptune = 4496000000,
+			Pluto = 594600000
+		}
 	}
 }
