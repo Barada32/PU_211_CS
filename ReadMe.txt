@@ -2,6 +2,10 @@
 https://www.youtube.com/watch?v=Hv4pyBZlIbU&list=PLeqyOOqxeiINkiWk7UrwAM6hTxWUQ5MrW
 
 TODO:
+В Solution 'Introduction' добавить проект 'classPoint', и в этом проекте перегрузить все необходимые операторы для класса 'Point'.
+(Что прийдет в голову)
+
+DONE:
 1. Вычислить Sum, Avg, Min, Max для зубчатого массива;
 2. Реализовать класс 'Point', в классе 'Point' должен быть метод 'distance()',  вычислить расстояние до указанной точки;
 3. Реализовать класс 'Point', в классе 'Point' должен быть статический метод 'distance()',  вычислить расстояние между двумя точками;
