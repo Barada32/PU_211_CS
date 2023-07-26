@@ -2,6 +2,9 @@
 https://www.youtube.com/watch?v=Hv4pyBZlIbU&list=PLeqyOOqxeiINkiWk7UrwAM6hTxWUQ5MrW
 
 TODO:
+Перегрузить операторы в классе Fraction;
+
+DONE:
 В Solution 'Introduction' добавить проект 'classPoint', и в этом проекте перегрузить все необходимые операторы для класса 'Point'.
 (Что прийдет в голову)
 
