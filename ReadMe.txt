@@ -2,6 +2,9 @@
 https://www.youtube.com/watch?v=Hv4pyBZlIbU&list=PLeqyOOqxeiINkiWk7UrwAM6hTxWUQ5MrW
 
 TODO:
+Добить Геометрию;
+
+TODO:
 1. Записать группу в файл;
 2. Загрузить группу из файла;
 
