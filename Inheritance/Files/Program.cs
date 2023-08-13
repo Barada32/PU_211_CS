@@ -1,9 +1,12 @@
-﻿using System;
+﻿//#define WRITE_TO_FILE
+#define READ_FROM_FILE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+
 
 namespace Files
 {
@@ -11,6 +14,7 @@ namespace Files
 	{
 		static void Main(string[] args)
 		{
+#if WRITE_TO_FILE
 			string currentDirectory = Directory.GetCurrentDirectory();
 			string filename = "File.txt";
 			Console.WriteLine(currentDirectory);
@@ -23,7 +27,9 @@ namespace Files
 			Console.WriteLine(filename);
 			string cmd = currentDirectory + "\\" + filename;
 			Console.WriteLine(cmd);
-			System.Diagnostics.Process.Start("notepad", cmd);
+			System.Diagnostics.Process.Start("notepad", cmd); 
+#endif
+
 		}
 	}
 }

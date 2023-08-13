@@ -26,7 +26,7 @@ namespace Academy
 			#endregion
 
 			Specialist tommi = new Specialist("Vercetti", "Tomas", 30, "Theft", "Vice", 98, 99, "How to make money", 12);
-			Teacher diaz = new Teacher("Diaz", "Ricardo", 50, "Weapons sitribution", 20);
+			Teacher diaz = new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20);
 
 			Human[] group = new Human[]
 				{
