@@ -42,11 +42,11 @@ namespace AbstractGeometry
 			System.Drawing.Pen pen = new System.Drawing.Pen(Color, LineWidth);
 			e.Graphics.DrawEllipse(pen, StartX, StartY, (float)GetDiameter(), (float)GetDiameter());
 		}
-		public override void info(PaintEventArgs e)
+		public override void Info(PaintEventArgs e)
 		{
 			Console.WriteLine(this.GetType());
 			Console.WriteLine($"Радиус круга: {Radius} ");
-			base.info(e);
+			base.Info(e);
 		}
 	}
 }
