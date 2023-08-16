@@ -54,5 +54,19 @@ namespace AbstractGeometry
 			Pen pen = new Pen(Color, LineWidth);
 			e.Graphics.DrawRectangle(pen, StartX, StartY, (int)SideA, (int)SideB);
 		}
+		public override void info(PaintEventArgs e)
+		{
+			Console.WriteLine(this.GetType());
+			if (this.GetType() == typeof(AbstractGeometry.Rectangle))
+			{
+				Console.WriteLine($"Сторона 'A': {side_a}");
+				Console.WriteLine($"Сторона 'B': {side_b}"); 
+			}
+			if (this.GetType() == typeof(AbstractGeometry.Square))
+			{
+				Console.WriteLine($"Длина стороны: {side_b}"); 
+			}
+			base.info(e);
+		}
 	}
 }
