@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define WRITE_TO_FILE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,7 @@ namespace Academy
 				Console.WriteLine(hank);*/
 			#endregion
 
+#if WRITE_TO_FILE
 			Specialist tommi = new Specialist("Vercetti", "Tomas", 30, "Theft", "Vice", 98, 99, "How to make money", 12);
 			Teacher diaz = new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20);
 
@@ -44,7 +46,7 @@ namespace Academy
 			for (int i = 0; i < group.Length; i++)
 			{
 				Console.WriteLine(group[i]);
-				streamWriter.WriteLine(group[i]);
+				streamWriter.WriteLine(group[i]+";");
 				//group[i].Print();
 				Console.WriteLine(delimiter);
 			}
@@ -52,7 +54,51 @@ namespace Academy
 			//sealed - запечатанный
 
 			string cmd = currentDirectory + "\\" + filename;
-			System.Diagnostics.Process.Start("notepad", cmd);
+			System.Diagnostics.Process.Start("notepad", cmd); 
+#endif
+
+			Load("group.txt");
+			//Console.WriteLine(typeof(Academy.Student).ToString());
+		}
+		static Human[] Load(string filename)
+		{
+			Human[] group = null;
+			List<Human> l_group = new List<Human>();
+			StreamReader streamReader = new StreamReader(filename);
+			while (!streamReader.EndOfStream)
+			{
+				string buffer = streamReader.ReadLine();
+				string[] values = buffer.Split(new char[] { ':', ',', ';' });
+				#region READ_CHECK
+				//Console.WriteLine(buffer);
+				//foreach (string i in values) Console.Write(i + "\t");
+				//Console.WriteLine();
+				//Console.WriteLine(delimiter);
+				//Console.WriteLine(); 
+				#endregion
+				l_group.Add(HumanFactory(values[0]));
+				//Console.WriteLine(l_group.Last().GetType());
+				l_group.Last();
+			}
+			streamReader.Close();
+			return group;
+		}
+		static Human HumanFactory(string type)
+		{
+			Human human = null;
+			if (type == typeof(Academy.Student).ToString())		human = new Student("", "", 0, "", "", 0, 0);
+			if (type == typeof(Academy.Teacher).ToString())		human = new Teacher("", "", 0, "", 0);
+			if (type == typeof(Academy.Graduate).ToString())	human = new Graduate("", "", 0, "", "", 0, 0, "");
+			if (type == typeof(Academy.Specialist).ToString())	human = new Specialist("", "", 0, "", "", 0, 0, "", 0);
+			return human;
+		}
+		static Human InitHuman(Human obj, string[] values)
+		{
+			if (obj.GetType() == typeof(Academy.Student))
+			{
+
+			}
+			return obj;
 		}
 	}
 }
