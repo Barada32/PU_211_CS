@@ -21,7 +21,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + $" {Grade}";
+			return base.ToString() + $", {Grade}";
 		}
 		public override void Print()
 		{

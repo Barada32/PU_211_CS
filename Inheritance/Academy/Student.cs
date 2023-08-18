@@ -25,7 +25,8 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + $" {Speciality} {Group} {Rating} {Attendance}";
+			//CSV - Comma Separated Values (Значения, разделенные запятыми)
+			return base.ToString() + ",\t" + $" {Speciality},\t{Group},\t{Rating},\t{Attendance}";
 		}
 		public override void Print()
 		{

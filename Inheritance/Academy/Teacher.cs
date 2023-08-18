@@ -22,7 +22,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + $" {Speciality} {Experience} лет.";
+			return base.ToString() + ", " + $" {Speciality},\t {Experience} лет.";
 		}
 		public override void Print()
 		{

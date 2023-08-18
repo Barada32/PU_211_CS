@@ -20,7 +20,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + " " + Subject;
+			return base.ToString() + ",\t " + Subject;
 		}
 		public /*sealed*/ override void Print()
 		{

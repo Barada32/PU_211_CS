@@ -19,7 +19,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return $"{LastName} {FirstName} {Age} лет.";
+			return $"{this.GetType()}:\t{LastName}, {FirstName}, {Age} лет.";
 		}
 
 		public virtual void Print()
